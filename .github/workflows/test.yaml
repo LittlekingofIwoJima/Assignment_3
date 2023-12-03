@@ -1,0 +1,32 @@
+name: R-CMD-check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  R-CMD-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up R
+      uses: r-lib/actions/setup-r@v1
+      with:
+        r-version: 'latest'
+
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        install.packages(c("remotes", "your_other_dependency_packages"))
+        remotes::install_deps()
+
+    - name: R CMD Check
+      run: |
+        R CMD build .
+        R CMD check *tar.gz --as-cran
