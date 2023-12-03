@@ -1,0 +1,22 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: macOS-latest
+    steps:
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v1
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          install.packages(c("devtools", "duckdb", "dplyr", "DBI", "DT", "ggplot2", "tidyr", "purrr"))
+      - name: Run tests
+        run: |
+          Rscript -e 'devtools::install(); devtools::test()'
+
