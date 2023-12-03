@@ -11,6 +11,7 @@ The Build Status can be checked using the link below.
 [![Build Status]((https://github.com/LittlekingofIwoJima/Assignment_3/workflows/Test/badge.svg)](https://github.com/LittlekingofIwoJima/Assignment_3/actions)
 
 Besides,
+all testing yaml and yml files are in .github/workflows
 The Github Actions for testing is: 
 usethis::use_github_actions("test")
 The Github Actions for testing coverage is: 
