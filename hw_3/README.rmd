@@ -1,0 +1,25 @@
+---
+title: "bis620.2022"
+output: github_document
+---
+
+Package Name: bis620.2022
+The package is used to start the shiny application 
+
+The Build Status can be checked using the link below. 
+
+[![Build Status](https://github.com/your-username/your-repo-name/workflows/R-CMD-check/badge.svg)]
+
+Besides,
+The Github Actions for testing is: 
+usethis::use_github_actions("test")
+The Github Actions for testing coverage is: 
+usethis::use_github_actions("test-coverage")
+The Github Actions for linting is: 
+usethis::use_github_actions("lint")
+
+Commit and Push Changes Actions:
+usethis::use_git()
+usethis::use_github()
+
+

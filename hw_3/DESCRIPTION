@@ -1,0 +1,9 @@
+Package: hw_3
+Type: Shiny
+Title: hw_3 Package
+Version: 0.1.0
+Author: Sebastian Jin
+Maintainer: sebastian.jin@yale.edu
+Description: Shiny app for clinical trials analysis.
+License: MIT
+RoxygenNote: 7.2.3
